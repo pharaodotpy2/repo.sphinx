@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="de.praxis.frontend.controller.AppController" styleClass="root-shell">
+    <left>
+        <VBox styleClass="sidebar" prefWidth="240" spacing="8">
+            <Label text="PRAXIS" styleClass="app-logo"/>
+            <Button text="🏠 Dashboard" styleClass="nav-btn nav-active"/>
+            <Button text="👥 Patienten" styleClass="nav-btn"/>
+            <Button text="📅 Termine" styleClass="nav-btn"/>
+            <Button text="📋 Dokumentation" styleClass="nav-btn"/>
+            <Button text="💊 Medikamente" styleClass="nav-btn"/>
+            <Button text="💶 Abrechnung" styleClass="nav-btn"/>
+            <Button text="📊 Statistiken" styleClass="nav-btn"/>
+            <Button text="⚙️ Einstellungen" styleClass="nav-btn"/>
+        </VBox>
+    </left>
+    <top>
+        <HBox styleClass="topbar" spacing="12">
+            <Label text="Dashboard / Heute" styleClass="breadcrumb"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <TextField promptText="⌘ K  Globale Suche" styleClass="search-field" onAction="#onGlobalSearch"/>
+            <Label fx:id="readerStatus" styleClass="reader-status"/>
+            <Label text="👤" styleClass="avatar"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="16" styleClass="content-area">
+            <HBox spacing="12">
+                <Label fx:id="kpiTermine" styleClass="kpi-card"/>
+                <Label fx:id="kpiWartend" styleClass="kpi-card"/>
+                <Label fx:id="kpiRechnungen" styleClass="kpi-card"/>
+                <Label fx:id="kpiNachrichten" styleClass="kpi-card"/>
+            </HBox>
+            <HBox spacing="12" VBox.vgrow="ALWAYS">
+                <VBox styleClass="panel" HBox.hgrow="ALWAYS">
+                    <Label text="Tageskalender" styleClass="panel-title"/>
+                    <TableView VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn text="Zeit" prefWidth="100"/>
+                            <TableColumn text="Patient" prefWidth="220"/>
+                            <TableColumn text="Typ" prefWidth="130"/>
+                            <TableColumn text="Status" prefWidth="140"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+                <VBox styleClass="panel" prefWidth="360">
+                    <Label text="Aktivitäts-Feed" styleClass="panel-title"/>
+                    <ListView VBox.vgrow="ALWAYS"/>
+                    <Separator/>
+                    <Label text="Kartenleser-Status" styleClass="panel-title"/>
+                    <Label text="● Offline" styleClass="status-dot danger"/>
+                </VBox>
+            </HBox>
+            <HBox spacing="8">
+                <Button text="Neuer Patient" styleClass="btn-primary"/>
+                <Button text="Neuer Termin" styleClass="btn-secondary"/>
+                <Button text="Rezept ausstellen" styleClass="btn-secondary"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,43 @@
+.app-logo { -fx-font-size: 22px; -fx-font-family: "JetBrains Mono"; }
+.nav-btn {
+  -fx-pref-height: 36;
+  -fx-background-color: transparent;
+  -fx-text-fill: -text-secondary;
+  -fx-alignment: center-left;
+  -fx-background-radius: 4;
+}
+.nav-active {
+  -fx-border-color: transparent transparent transparent -accent-primary;
+  -fx-border-width: 0 0 0 3;
+  -fx-background-color: rgba(0,200,255,0.08);
+  -fx-text-fill: -text-primary;
+}
+.search-field {
+  -fx-pref-height: 36;
+  -fx-background-color: -bg-elevated;
+  -fx-border-color: -border;
+  -fx-border-radius: 4;
+  -fx-background-radius: 4;
+  -fx-text-fill: -text-primary;
+}
+.kpi-card {
+  -fx-padding: 12;
+  -fx-background-color: -bg-surface;
+  -fx-border-color: -border;
+  -fx-border-radius: 6;
+  -fx-background-radius: 6;
+  -fx-min-width: 250;
+}
+.btn-primary, .btn-secondary {
+  -fx-pref-height: 36;
+  -fx-padding: 0 16 0 16;
+  -fx-background-radius: 4;
+}
+.btn-primary { -fx-background-color: -accent-primary; -fx-text-fill: #00121a; }
+.btn-secondary { -fx-background-color: transparent; -fx-border-color: -accent-primary; -fx-text-fill: -accent-primary; -fx-border-radius: 4; }
+.status-dot.danger { -fx-text-fill: -accent-danger; }
+.table-view, .list-view {
+  -fx-background-color: -bg-elevated;
+  -fx-control-inner-background: -bg-elevated;
+  -fx-border-color: -border;
+}

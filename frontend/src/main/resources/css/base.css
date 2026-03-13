@@ -1,0 +1,17 @@
+.root {
+  -bg-primary: #0A0E14;
+  -bg-surface: #111820;
+  -bg-elevated: #1A2332;
+  -border: #1E2D3D;
+  -accent-primary: #00C8FF;
+  -accent-success: #00E5A0;
+  -accent-warn: #FFB020;
+  -accent-danger: #FF4D6A;
+  -text-primary: #E8F0F7;
+  -text-secondary: #7A9BB5;
+  -text-disabled: #3A5068;
+  -fx-font-family: "DM Sans", "Segoe UI", sans-serif;
+  -fx-background-color: -bg-primary;
+  -fx-text-fill: -text-primary;
+}
+.label { -fx-text-fill: -text-primary; }

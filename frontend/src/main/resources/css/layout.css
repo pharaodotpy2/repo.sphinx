@@ -1,0 +1,21 @@
+.root-shell { -fx-background-color: -bg-primary; }
+.sidebar {
+  -fx-padding: 24 12 24 12;
+  -fx-background-color: -bg-surface;
+  -fx-border-color: -border;
+  -fx-border-width: 0 1 0 0;
+}
+.topbar {
+  -fx-alignment: center-left;
+  -fx-padding: 12 16 12 16;
+  -fx-border-color: transparent transparent -border transparent;
+  -fx-border-width: 0 0 1 0;
+}
+.content-area { -fx-padding: 16; }
+.panel {
+  -fx-padding: 12;
+  -fx-background-color: -bg-surface;
+  -fx-border-color: -border;
+  -fx-border-radius: 6;
+  -fx-background-radius: 6;
+}

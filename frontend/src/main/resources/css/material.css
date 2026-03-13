@@ -1,0 +1,28 @@
+.root {
+  -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+  -fx-background-color: #f5f6fa;
+}
+.tool-bar {
+  -fx-background-color: #1976d2;
+}
+.label.title-label {
+  -fx-text-fill: white;
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+}
+.panel {
+  -fx-padding: 12;
+  -fx-background-color: white;
+}
+.panel-title {
+  -fx-font-size: 14;
+  -fx-font-weight: 600;
+}
+.statusbar {
+  -fx-padding: 8;
+  -fx-background-color: #e3f2fd;
+}
+.button {
+  -fx-background-color: #42a5f5;
+  -fx-text-fill: white;
+}

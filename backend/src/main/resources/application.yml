@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:${user.home}/.praxisverwaltung/praxis.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.community.dialect.SQLiteDialect
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+logging:
+  file:
+    path: ${user.home}/.praxisverwaltung/logs
+
+praxis:
+  ai:
+    enabled: true
+    provider: mock
+  security:
+    aes-key: change-me-32-byte-key

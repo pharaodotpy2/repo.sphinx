@@ -1,0 +1,12 @@
+<configuration>
+  <property name="LOG_PATH" value="${user.home}/.praxisverwaltung/logs"/>
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_PATH}/praxis.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_PATH}/praxis-%d{yyyy-MM-dd}.log</fileNamePattern>
+      <maxHistory>14</maxHistory>
+    </rollingPolicy>
+    <encoder><pattern>%d %-5level [%thread] %logger - %msg%n</pattern></encoder>
+  </appender>
+  <root level="INFO"><appender-ref ref="ROLLING"/></root>
+</configuration>

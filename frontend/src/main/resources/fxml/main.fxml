@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="de.praxis.frontend.controller.MainController">
+    <top>
+        <ToolBar>
+            <Label text="Praxisverwaltungssystem" styleClass="title-label" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="Patient hinzufügen" />
+            <Button text="Terminplanung" />
+            <Button text="Abrechnung" />
+        </ToolBar>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.35">
+            <VBox spacing="8.0" styleClass="panel">
+                <Label text="Patientenliste" styleClass="panel-title" />
+                <TextField promptText="Suche (Name, Vers.-Nr.)" />
+                <ListView fx:id="patientList" VBox.vgrow="ALWAYS" />
+            </VBox>
+            <VBox spacing="8.0" styleClass="panel">
+                <Label text="Patienten-Timeline" styleClass="panel-title" />
+                <TextArea text="Timeline-Ansicht (MVP)" VBox.vgrow="ALWAYS" />
+            </VBox>
+        </SplitPane>
+    </center>
+    <bottom>
+        <HBox styleClass="statusbar">
+            <Label fx:id="statusLabel" text="Bereit" />
+        </HBox>
+    </bottom>
+</BorderPane>
